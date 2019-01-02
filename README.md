@@ -18,3 +18,9 @@ const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uran
     method on strings.
 
 4. Use the reduce method to create a sentence from the words in the following array     const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
+
+MORE PRACTICE: SPAM
+Learning Objective:
+1. Accessing data within an array of objects
+2. Build a list of email addresses of all the customer's contacts
+3. From the customers array that contains the emails we need to retrieve extract just the customers' contact email addresses and store them in a new array
