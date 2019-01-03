@@ -47,4 +47,4 @@ const words = ["The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", 
 const sentence = words.reduce()
 
 PRACTICE: BIG SPENDERS
-Use the filter method to get all the big spenders in the main array into a new one.
+Use the filter method to get all the big spenders in the main array into a new one
