@@ -22,7 +22,10 @@ function mapPlanets() {
 }
 
 let planetE2 = document.getElementById("planets");
-planetE2.innerHTML += `<p>${mapPlanets()}</p>`
+planetE2.innerHTML += `
+<br>
+<p>UpperCase Planets Using Map</p>
+<p>${mapPlanets()}</p>`
 /*
     Use the map method to create a new array where the
     first letter of each planet is capitalized. Use the
@@ -39,7 +42,10 @@ function filterPlanets() {
 }
 
 let planetE3 = document.getElementById("planets");
-planetE3.innerHTML += `<p>${filterPlanets()}</p>`
+planetE3.innerHTML += `
+<br>
+<p>Planets with the letter E</p>
+<p>${filterPlanets()} + " "</p>`
 /*
     Use the filter method to create a new array that
     contains planets with the letter 'e'. Use the `includes()`
@@ -48,6 +54,7 @@ planetE3.innerHTML += `<p>${filterPlanets()}</p>`
 
 
 // Use the reduce method to create a sentence from the words in the following array
+
 const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
 const sentence = words.reduce(
     function (sentenceFragment, next) {
@@ -55,4 +62,7 @@ const sentence = words.reduce(
     }
 )
 let planetE4 = document.getElementById("planets");
-planetE4.innerHTML += `<p>${sentence}</p>`
+planetE4.innerHTML += `
+<br>
+<p>Using Reduce</p>
+<p>${sentence}</p>`

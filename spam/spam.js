@@ -245,4 +245,5 @@ let customers = [
       let addIt = vmail.contacts.email;
       onlyEmail.push(addIt);
   });
+  console.log("List of email arrays")
   console.table(onlyEmail)
