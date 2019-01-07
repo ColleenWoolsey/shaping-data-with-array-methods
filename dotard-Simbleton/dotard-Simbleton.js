@@ -324,8 +324,9 @@ businesses.forEach(business => {
   let totalOrders = business.orders.reduce(
     (currentTotal, nextValue) => currentTotal += nextValue,
     0
-)
-    outEl.innerHTML += `
+  )
+
+  outEl.innerHTML += `
         <h2>
             ${business.companyName}
             ($${totalOrders.toFixed(2)})
@@ -339,10 +340,10 @@ businesses.forEach(business => {
             ${business.addressZipCode}
         </section>
     `;
-      // toFixed on totalOrders rounds it to 2 decimal places
-    outEl.innerHTML += "<hr/>";
+  outEl.innerHTML += "<hr/>";
+  // toFixed on totalOrders rounds it to 2 decimal places
     console.log(`${business.companyName} + ${totalOrders.toFixed(2)}`)
-  });
+  });  
 
     //reduce
 // Lightning Exercise 1: Use the reduce method on the following array to determine
@@ -372,15 +373,30 @@ console.log(sentenceTotal)
 // into a new one.
 // Array to contain all the big spenders
 console.log("          ");
-console.log("BIG SPENDERS (OVER $9000)");
-const bigSpenders = businesses.filter(business => {
-  
-  businesses.forEach(business => {
-    let totalOrders = business.orders.reduce(
-      (currentTotal, nextValue) => currentTotal += nextValue, 0)
-      outEl.innerHTML += `
-          <h2>
-              ${business.companyName}
-              ($${totalOrders.toFixed(2)})
-          </h2>`;
+console.log("Companies with totalOrders over $40,000");
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+const bigSpender = businesses.filter(business => {
+  let totalOrders = business.orders.reduce(reducer);
+  return totalOrders > 40000;
+  })
+  console.table(bigSpender);
+
+// List only the companies that have placed a single order for more than
+// nine thousand dollars  in the orders array 
+console.log("          ");
+console.log("Order array for each company");
+
+const borders = businesses.orders
+function niner(orders) {
+  return orders > 9000
+}
+
+const overNine = businesses.filter(business => {
+  console.log(business.companyName + "   " + business.orders)
+  let whatever = business.orders.some(orders => orders > 9000)
+  return whatever
 })
+console.log("          ");
+console.log("Companies with single orders over $9,000");
+console.log(overNine)
